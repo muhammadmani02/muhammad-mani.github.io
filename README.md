@@ -1,1 +1,1 @@
-# muhammadmani02.github.io
+# muhammad-mani.github.io
