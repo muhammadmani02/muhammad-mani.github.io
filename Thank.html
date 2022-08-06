@@ -34,6 +34,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-M3ZFFRF');</script>
 <!-- End Google Tag Manager -->
 
+
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y8F86X5F56"></script>
 <script>
@@ -42,29 +44,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   gtag('js', new Date());
 
   gtag('config', 'G-Y8F86X5F56');
-</script>
-
-<script type="text/javascript">
-    function submitMail() {
-        document.getElementById("submitResult").innerHTML = '<div class="spinner-border text-secondary" role="status"><span class="sr-only">Loading...</span></div>';
-        var _name = document.getElementById("name");
-        var _email = document.getElementById("email");
-        var _subject = document.getElementById("subject");
-        var _message = document.getElementById("message");
-        var xmlhttp = new XMLHttpRequest();
-
-            xmlhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    document.getElementById("submitResult").innerHTML = this.responseText;
-                    setTimeOut(()=>{
-                        document.getElementById("submitResult").innerHTML = "";
-                    },2000);
-                }
-            }
-
-            xmlhttp.open("GET", "submitMail.php?name="+_name.value+"&email="+_email.value+"&subject="+_subject.value+"&message="+_message.value, true);
-            xmlhttp.send();  
-    }
 </script>
 
 </head>
@@ -114,8 +93,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </button>        
                     <!-- 16:9 aspect ratio -->
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/EqGsAzPLvFo" title="My Introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <!--<iframe  src="https://www.youtube.com/embed/EqGsAzPLvFo" id="video"></iframe>-->
+                        <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
                     </div>
                 </div>
             </div>
@@ -141,7 +119,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         
                   
                         <button type="button" class="btn-play" data-toggle="modal"
-                            data-target="#videoModal">
+                            data-src="https://www.youtube.com/watch?v=EqGsAzPLvFo" data-target="#videoModal">
                             <span></span>
                         </button>
                         <h5 class="font-weight-normal text-white m-0 ml-4 d-none d-sm-block">Play Video</h5>
@@ -330,7 +308,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #DEB992F;">Service</h1>
                 <h1 class="position-absolute text-uppercase text-primary">My Services</h1>
             </div>
-            <div class="row pb-3 ">
+            <div class="row pb-3">
                 <div class="col-lg-4 col-md-6 text-center mb-5">
                     <div class="d-flex align-items-center justify-content-center mb-4">
                         <i class="fa fa-2x fa-laptop service-icon bg-primary text-white mr-3"></i>
@@ -356,7 +334,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                 <div class="col-lg-4 col-md-6 text-center mb-5">
                     <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fas fa-keyboard fa-2x service-icon bg-primary text-white mr-3"></i>
+                        <i class="fab fa-2x fa-apple service-icon bg-primary text-white mr-3"></i>
                         <h4 class="font-weight-bold m-0">Keywords Research</h4>
                     </div>
                     <p>
@@ -364,6 +342,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                     </p>
                     <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-search service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">SEO</h4>
+                    </div>
+                  <p>
+                       <!-- Description --> 
+
+                    </p>
+                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-edit service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">Content Creating</h4>
+                    </div>
+                   <p>
+                       <!-- Description --> 
+
+                    </p>
+                    <a class="border-bottom border-primary text-decoration-none" href="#">Read More</a>
                 </div>
             </div>
         </div>
@@ -466,24 +466,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="owl-carousel testimonial-carousel">
                         <div class="text-center">
                             <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                            <h4 class="font-weight-light mb-4">Mani is a pleasure to work with. Only qualm is that we have to submit these reviews prior to the management of the campaign ending - so technically the 1 month engagement has another month of work remaining.</h4>
+                            <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet accusam amet eirmod eos, labore diam clita</h4>
                             <img class="img-fluid rounded-circle mx-auto mb-3" src="img/testimonial-1.jpg" style="width: 80px; height: 80px;">
-                            <h5 class="font-weight-bold m-0">Marcus</h5>
-                            
+                            <h5 class="font-weight-bold m-0">Client Name</h5>
+                            <span>Profession</span>
                         </div>
                         <div class="text-center">
                             <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                            <h4 class="font-weight-light mb-4">Exceptional work so far, outstanding communication, he has an effortless collaborative style that I really appreciated. I'm very excited to see how this Campaign evolves and grows.</h4>
+                            <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet accusam amet eirmod eos, labore diam clita</h4>
                             <img class="img-fluid rounded-circle mx-auto mb-3" src="img/testimonial-2.jpg" style="width: 80px; height: 80px;">
-                            <h5 class="font-weight-bold m-0">Deland Rohair</h5>
-                        
+                            <h5 class="font-weight-bold m-0">Client Name</h5>
+                            <span>Profession</span>
                         </div>
                         <div class="text-center">
                             <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                            <h4 class="font-weight-light mb-4">Seller went way above and beyond to help me and did amazing work. A true professional and I appreciate his amazing expertise! I will be back.</h4>
+                            <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet accusam amet eirmod eos, labore diam clita</h4>
                             <img class="img-fluid rounded-circle mx-auto mb-3" src="img/testimonial-3.jpg" style="width: 80px; height: 80px;">
-                            <h5 class="font-weight-bold m-0">Provoice Actress
-</h5>
+                            <h5 class="font-weight-bold m-0">Client Name</h5>
+                            <span>Profession</span>
                         </div>
                     </div>
                 </div>
@@ -505,6 +505,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="contact-form text-center">
+                        <div id="success"></div>
+                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
                             <div class="form-row">
                                 <div class="control-group col-sm-6">
                                     <input type="text" class="form-control p-4" id="name" placeholder="Your Name"
@@ -524,13 +526,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </div>
                             <div class="control-group">
                                 <textarea class="form-control py-3 px-4" rows="5" id="message" placeholder="Message"
-                                    required="required"></textarea>
-                                <p class="help-block mt-4" id="submitResult"></p>
+                                    required="required"
+                                    data-validation-required-message="Please enter your message"></textarea>
+                                <p class="help-block text-danger"></p>
                             </div>
                             <div>
-                                <button class="btn btn-outline-primary" onclick="submitMail();">Send
+                                <button class="btn btn-outline-primary" type="submit" id="sendMessageButton">Send
                                     Message</button>
                             </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -543,10 +547,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">
         <div class="container text-center py-5">
             <div class="d-flex justify-content-center mb-4">
-                <a class="btn btn-light btn-social mr-2" href="https://twitter.com/MuhammadMani02"><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-light btn-social mr-2" href="https://www.facebook.com/muhammadmani02"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-light btn-social mr-2" href="https://www.linkedin.com/in/muhammadmani02/"><i class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-light btn-social" href="https://www.instagram.com/muhammad.mani02/"><i class="fab fa-instagram"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
             </div>
             <div class="d-flex justify-content-center mb-3">
                 <a class="text-white" href="#">Privacy</a>
@@ -557,7 +561,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span class="px-3">|</span>
                 <a class="text-white" href="#">Help</a>
             </div>
-            <p class="m-0">&copy; <a class="text-white font-weight-bold" href="#">muhammad-mani.me</a>. All Rights Reserved. Designed by <a class="text-white font-weight-bold" href="https://htmlcodex.com">Ahmed.Inc</a>
+            <p class="m-0">&copy; <a class="text-white font-weight-bold" href="#">Domain Name</a>. All Rights Reserved. Designed by <a class="text-white font-weight-bold" href="https://htmlcodex.com">HTML Codex</a>
             </p>
         </div>
     </div>
@@ -579,6 +583,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
