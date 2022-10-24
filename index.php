@@ -525,7 +525,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div class="control-group">
                                 <textarea class="form-control py-3 px-4" rows="5" id="message" placeholder="Message"
                                     required="required"></textarea>
-                                <p class="help-block mt-4" id="submitResult">asds</p>
+                                <p class="help-block mt-4" id="submitResult"></p>
                             </div>
                             <div>
                                 <button class="btn btn-outline-primary" onclick="submitMail();">Send

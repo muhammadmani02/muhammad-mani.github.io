@@ -1,6 +1,6 @@
 <?php 
 include('smtp/PHPMailerAutoload.php');
-
+echo 'br';
 $name = $_REQUEST['name'];
 $email = $_REQUEST['email'];
 $subject = $_REQUEST['subject'];
