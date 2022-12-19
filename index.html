@@ -25,13 +25,47 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
-    <!-- Google Tag Manager -->
+
+<!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-M3ZFFRF');</script>
 <!-- End Google Tag Manager -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y8F86X5F56"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y8F86X5F56');
+</script>
+
+<script type="text/javascript">
+    function submitMail() {
+        document.getElementById("submitResult").innerHTML = '<div class="spinner-border text-secondary" role="status"><span class="sr-only">Loading...</span></div>';
+        var _name = document.getElementById("name");
+        var _email = document.getElementById("email");
+        var _subject = document.getElementById("subject");
+        var _message = document.getElementById("message");
+        var xmlhttp = new XMLHttpRequest();
+
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("submitResult").innerHTML = this.responseText;
+                    setTimeOut(()=>{
+                        document.getElementById("submitResult").innerHTML = "";
+                    },2000);
+                }
+            }
+
+            xmlhttp.open("GET", "submitMail.php?name="+_name.value+"&email="+_email.value+"&subject="+_subject.value+"&message="+_message.value, true);
+            xmlhttp.send();  
+    }
+</script>
 
 </head>
 
@@ -99,11 +133,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 <div class="col-lg-7 text-center text-lg-left">
                     <h3 class="text-white font-weight-normal mb-3">I'm</h3>
-                    <h1 class="display-3 text-uppercase text-primary mb-2" style="-webkit-text-stroke: 2px #0000;">Muhammad Mani</h1>
+                            <img src="img/logo.png" width="800" height="400" class="img-fluid">
                     <h1 class="typed-text-output d-inline font-weight-lighter text-white"></h1>
-                    <div class="typed-text d-none" >PPC Specialist, Google Ads Expert, Media Buyer, Meta Ads Professioanl</div>
+                    <div class="typed-text d-none" >PPC Specialist, Google Ads Expert, Social Media Marketer, Digital Marketing Consultant</div>
                     <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
-                        <a href="https://drive.google.com/file/d/1n1vt1QRjgYx7LRwqSw4jiGV662Ff0FpE/view?usp=share_link" class="btn btn-outline-light mr-5">My CV</a>
+                        <a href="https://drive.google.com/file/d/1TEHe9bOBosQPBwlIma2CpMpCph2_8wtM/view?usp=share_link" class="btn btn-outline-light mr-5">My CV</a>
                         
                   
                         <button type="button" class="btn-play" data-toggle="modal"
